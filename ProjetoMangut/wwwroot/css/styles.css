@@ -1,0 +1,407 @@
+.glider, .glider-contain {
+    margin: 0 auto;
+    position: relative
+}
+
+.glider, .glider-track {
+    transform: translateZ(0)
+}
+
+.glider-dot, .glider-next, .glider-prev {
+    border: 0;
+    padding: 0;
+    user-select: none;
+    outline: 0
+}
+
+.btn-group-vertical > .btn, .btn-group-vertical > .btn-group, .card-img, .card-img-bottom, .card-img-top, .glider-contain, .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+    width: 100%
+}
+
+.glider {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none
+}
+
+.glider-track {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1
+}
+
+.glider.draggable {
+    user-select: none;
+    cursor: -webkit-grab;
+    cursor: grab
+}
+
+    .glider.draggable .glider-slide img {
+        user-select: none;
+        pointer-events: none
+    }
+
+.glider.drag {
+    cursor: -webkit-grabbing;
+    cursor: grabbing
+}
+
+.glider-slide {
+    user-select: none;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    min-width: 150px
+}
+
+    .glider-slide img {
+        max-width: 100%
+    }
+
+.glider::-webkit-scrollbar {
+    opacity: 0;
+    height: 0
+}
+
+.glider-next, .glider-prev {
+    position: absolute;
+    background: 0 0;
+    z-index: 2;
+    font-size: 40px;
+    text-decoration: none;
+    left: -23px;
+    top: 30%;
+    cursor: pointer;
+    color: #666;
+    opacity: 1;
+    line-height: 1;
+    transition: opacity .5s cubic-bezier(.17,.67,.83,.67),color .5s cubic-bezier(.17,.67,.83,.67)
+}
+
+    .glider-next:focus, .glider-next:hover, .glider-prev:focus, .glider-prev:hover {
+        color: #ccc
+    }
+
+.glider-next {
+    right: -23px;
+    left: auto
+}
+
+    .glider-next.disabled, .glider-prev.disabled {
+        opacity: .25;
+        color: #666;
+        cursor: default
+    }
+
+.fade:not(.show), .glider-hide, .modal-backdrop.fade, .toast:not(.showing):not(.show) {
+    opacity: 0
+}
+
+.glider-dots {
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0
+}
+
+.glider-dot {
+    display: block;
+    cursor: pointer;
+    color: #ccc;
+    border-radius: 999px;
+    background: #ccc;
+    width: 12px;
+    height: 12px;
+    margin: 7px
+}
+
+    .glider-dot:focus, .glider-dot:hover {
+        background: #ddd
+    }
+
+    .glider-dot.active {
+        background: #a89cc8
+    }
+
+@media (max-width:36em) {
+    .glider::-webkit-scrollbar {
+        opacity: 1;
+        -webkit-appearance: none;
+        width: 7px;
+        height: 3px
+    }
+
+    .glider::-webkit-scrollbar-thumb {
+        opacity: 1;
+        border-radius: 99px;
+        background-color: rgba(156,156,156,.25);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.25);
+        box-shadow: 0 0 1px rgba(255,255,255,.25)
+    }
+}
+
+.website-logo:after {
+    content: ""
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0
+}
+
+    .form-range:focus, .slick-list:focus, button:focus:not(:focus-visible) {
+        outline: 0
+    }
+
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand
+    }
+
+.slick-slider .slick-list, .slick-slider .slick-track {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+    .slick-track:after, .slick-track:before {
+        display: table;
+        content: ''
+    }
+
+    .slick-track:after {
+        clear: both
+    }
+
+.slick-loading .slick-slide, .slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-initialized .slick-slide, .slick-slide img {
+    display: block
+}
+
+.slick-arrow.slick-hidden, .slick-slide.slick-loading img {
+    display: none
+}
+
+.form-range:disabled, .slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+.navbar .nav-item {
+    padding: 0 8px !important
+}
+
+button {
+    border-radius: 3px !important
+}
+
+.website-logo {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom,rgba(56,56,56,.13) 40%,rgb(70 40 10)) center 95%/cover no-repeat,url(https://media.discordapp.net/attachments/920926918503718917/928753958556684288/indian-2932778_1920.jpg) center 95%/cover no-repeat;
+    display: block;
+    position: relative
+}
+
+
+/* Modal */
+#Login, #Register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    animation: .5s ease-in-out forwards slideDown;
+    z-index: 11;
+    will-change: transform;
+    backdrop-filter: blur(3px)
+}
+
+#Register {
+    background-color: #212020b6;
+    border-color: none
+}
+
+#Login {
+    background-color: #376e50b6;
+    border-color: none
+}
+
+    #Login:not(.enabled), #Register:not(.enabled) {
+        animation: .3s ease-in forwards slideUp;
+        will-change: transform
+    }
+
+.adjust-input {
+    position: relative;
+    top: -10px
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0
+    }
+}
+
+.d-block, .enabled {
+    display: block !important
+}
+
+.website-logo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background: linear-gradient(to bottom,rgba(56,56,56,.13) 40%,rgb(70 40 10)) center 92%/cover,url(https://media.discordapp.net/attachments/920926918503718917/928753958556684288/indian-2932778_1920.jpg) center 92%/cover;
+    filter: blur(4px)
+}
+
+.backcard {
+    margin-top: 0;
+    margin-bottom: 32px;
+    background-color: #fff;
+    box-shadow: 1px 3px 5px rgba(30,30,30,.2);
+    padding: 32px 24px
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: rgba(255,255,255,.04) !important;
+    box-shadow: inset 0 0 2px rgba(255,255,255,.35);
+    border-radius: 15px
+}
+
+.membersList div[class^=col] img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    box-shadow: 0 0 0 3px #a94c1d;
+    filter: brightness(105%) contrast(106%) saturate(106%)
+}
+
+.membersList div[class^=col] h5 {
+    font-size: 137%;
+    color: rgba(82,72,71,.59);
+    height: 53px;
+    vertical-align: middle;
+    display: flex;
+    position: relative;
+    top: -34px;
+    font-family: Alatsi
+}
+
+.membersList {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    width: 88%
+}
+
+    .membersList div.attrTags span.badge {
+        margin: 0 2px
+    }
+
+.attrTags {
+    margin-bottom: 20px;
+    position: relative;
+    top: -30px
+}
+
+.font-alatsi {
+    font-family: Alatsi;
+    padding-top: 16px !important
+}
+
+.attrTags span.badge {
+    font-size: calc(.5rem + .5vw)
+}
+
+.membersList div[class^=col]:hover {
+    z-index: 2;
+    box-shadow: 0 0 150px rgba(3,3,3,.3);
+    border-radius: 8px;
+    transition: .3s ease-out;
+    bottom: 4px;
+    position: relative
+}
+
+.membersList div[class^=col]:not(:hover) {
+    transition: .1s ease-out;
+    position: relative;
+    bottom: 0
+}
+
+.membersList div[class^=col]:hover > img {
+    box-shadow: 0 0 0 100vw #000
+}

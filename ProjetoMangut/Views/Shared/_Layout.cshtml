@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" style="overflow-x:hidden">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mangut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caladea">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calistoga">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Farro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Farsan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Voltaire">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="shortcut icon" href="~/img/icon-mangut.ico">
+</head>
+
+<body style="font-weight: 500;">
+    <div class="container-fluid" style="padding: 0;z-index: 2;left: 0;right: 0;top: 0;z-index: 2;left: 0;right: 0;top: 0;position: absolute;">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light navbar-expand-md" style="margin-top: 12px;">
+                    <div class="container-fluid"><a data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></a>
+                        <div class="collapse navbar-collapse d-none" id="navcol-2">
+                            <ul class="navbar-nav text-end ms-auto">
+                                <li class="nav-item text-end">
+                                    <partial name="_LoginPartial" />
+                                    @*<a asp-controller="Home" asp-action="Cadastro" class="btn btn-primary" id="MainButton-Register" type="button" style="padding: 3px 16px 5px;/*background: #659D80;*//*border-color: #659D80;*/border-radius: 3px 0 0 3px !important;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-person-plus" style="position: relative;top: -1px;">
+                                            <path fill-rule="evenodd" d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"></path>
+                                        </svg>&nbsp; Cadastro
+                                    </a><!-- 
+                                    Não separado para evitar a inserção de caractere de espaço
+                                 --><a asp-controller="Home" asp-action="Login" class="btn btn-primary" id="MainButton-Login" type="button" style="padding: 3px 16px 5px;/*background: #659D80;*//*border-color: #659D80;*/margin-left: 1px;border-radius: 0 3px 3px 0 !important;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-person-square" style="position: relative;top: -1px;">
+                                            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                                            <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                                        </svg>&nbsp; Login
+                                    </a>*@
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="MinhasCompras" asp-action="Index" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" type="button" style="padding: 3px 16px 5px;/*background: #659D80;*//*border-color: #659D80;*/" disabled title="Cesta vazia">
+                                        <i class="fa fa-shopping-basket"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row d-none d-sm-block">
+            <div class="col text-center"><img src="~/img/sOT6LAPm_4x.png" height="220px" style="image-rendering: crisp-edges;filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5)) brightness(3.1);"></div>
+            <div class="col text-center d-none"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-person-bounding-box shadow" style="color: #12ad69;font-size: 90px;text-shadow: 0px 0px 3px #f2ebe4;border-style: none;border-color: var(--bs-green);">
+                    <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"></path>
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                </svg>
+                <h1 class="display-1 text-secondary" style="color: var(--km-bg);text-shadow: 0px 0px 3px #80b88d, 0px 0px 4px var(--bs-green), 0px 0px 4px var(--bs-green);">Mangut</h1>
+            </div>
+        </div>
+    </div><div class="website-logo d-none d-sm-block">
+    
+</div>
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-primary text-center" id="MainMenu" style="background: linear-gradient(0deg, rgba(5,255,150,0.16) 0%, rgba(52,213,88,0.26)), rgba(1,36,20,0.53);backdrop-filter: blur(5px);background-color: #ca2a07 !important;z-index: 7;box-shadow: 0px 0px;">
+        <div class="container-fluid"><a class="navbar-brand d-md-none justify-content-xxl-start" href="#" style="color: var(--bs-light);text-shadow: 0px 0px 1px #80b88d, 0px 0px 2px var(--bs-green), 0px 0px 3px var(--bs-green);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-person-bounding-box" style="color: rgba(79,255,107,0.73);/*font-size: 90px;*//*text-shadow: 0px 0px 14px var(--km-black);*/border-style: none;/*border-color: var(--bs-green);*/margin-right: 12px;margin-left: 12px;position: relative;top: -2px;filter: drop-shadow(-1px -1px 1px rgba(0,0,0,.5));">
+                    <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"></path>
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                </svg>Mangut</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-list">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                </svg></button>
+            <div class="collapse navbar-collapse text-start" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="@(@Url.Action() != "/" ? "nav-link" : "nav-link active")" asp-controller="Home" asp-action="Index">
+                            <span style="margin-right: 12px;position: relative;left: 3px;top: -2px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-bar-chart-line">
+                                    <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"></path>
+                                </svg>
+                            </span>Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="@(@Url.Action() != "/Home/Home" ? "nav-link" : "nav-link active")" asp-controller="Home" asp-action="Home">
+                            <span style="margin-right: 12px;position: relative;left: 3px;top: -2px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-house-door-fill">
+                                    <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"></path>
+                                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+                                </svg>
+                            </span>Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="@(@Url.Action() != "/Home/Busca" ? "nav-link" : "nav-link active")" asp-controller="Home" asp-action="Busca">
+                            <span style="margin-right: 12px;position: relative;left: 3px;top: -2px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-geo">
+                                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"></path>
+                                </svg>
+                            </span>Na região
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="@(@Url.Action() != "/Produtoes/Create" ? "nav-link" : "nav-link active")" asp-controller="Produtoes" asp-action="Create">
+                            <span style="margin-right: 12px;position: relative;left: 3px;top: -2px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-shop-window">
+                                    <path fill-rule="evenodd" d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"></path>
+                                </svg>
+                            </span>Cadastrar Produto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="@(@Url.Action() != "/Home/QuemSomos" ? "nav-link" : "nav-link active")" asp-controller="Home" asp-action="QuemSomos">
+                            <span style="margin-right: 12px;position: relative;left: 3px;top: -2px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-bar-chart-line">
+                                    <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"></path>
+                                </svg>
+                            </span>Sobre
+                        </a>
+                    </li>                    
+                </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="d-flex justify-content-start align-self-baseline align-items-xxl-end" data-aos="slide-up" data-aos-delay="50" style="width: 100%;height: auto;background: white;position: relative;bottom: -301px;margin-top: 180px;padding-top: 26px;padding-bottom: 16px;box-shadow: 0 -5px 55px rgba(22,22,22,0.22);">
+        <div class="container">
+            <div class="row d-lg-flex flex-column justify-content-lg-center">
+                <div class="col-lg-auto text-primary d-flex justify-content-center align-content-end align-self-center align-items-end">
+                    <p class="text-center text-light d-lg-flex justify-content-lg-center align-items-lg-center" style="text-shadow: 1px 1px 1px rgba(34,34,34,0.16), 2px 2px 4px var(--km-primary);text-align: justify !important;">
+                        <span style="opacity: 0.33;margin-bottom: 14px;">Mangut (2022) - Projeto Social Open-Source</span>
+                    </p>
+                </div>
+                <div class="col-auto d-flex flex-column flex-grow-0 justify-content-center align-content-around align-self-center flex-wrap align-items-center" style="height: 130px;width: 130px;position: relative;">
+                    <img class="d-lg-flex justify-content-lg-center align-items-lg-center" src="~/img/recode2021-squad19.png" style="margin-bottom: 16px;height: 88px !important;width: auto !important;z-index: 2;position: absolute;">
+                    <p class="text-center text-white d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-md-center align-items-md-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" style="text-shadow: 1px 1px 1px rgb(255,138,0);font-size: 15px;position: absolute;top: 83px;left: 34px;font-family: 'Alatsi';color: rgb(255,225,2) !important;background: linear-gradient(rgb(112,81,222), rgb(87,64,199));z-index: 0;padding: 15px 8px 2px;border-radius: 0 0 6px 6px;text-transform: uppercase;display: block;width: 62px;">Squad</p>
+                    <img src="https://www.recodepro.org.br/wp-content/uploads/2021/04/recodepro.png" style="height: 36px;image-rendering: crisp-edges;width: auto;position: absolute;top: 51px;left: 124px;filter: brightness(101%) saturate(191%);">
+                    <img src="~/img/sOT6LAPm_4x.png" style="height: 92px;image-rendering: crisp-edges;width: auto;position: relative;top: -8px;left: -107px;filter: drop-shadow(2px 3px 2px rgba(0,0,0,.3)) brightness(250%);">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- TO-DO: 3ª entrega
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap&v=weekly&channel=2" async></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.min.js?h=8d0a456b023c02a8a7aad3b1358e65a8"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
